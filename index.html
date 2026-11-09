@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Takuma Murakami</title>
+<meta name="description" content="Takuma Murakami — MBA candidate at Columbia Business School; former banker and trading-house investment professional across Tokyo and Mexico.">
+<style>
+  :root {
+    --navy: #0B2545;
+    --blue: #6CACE4;       /* Columbia blue */
+    --blue-light: #B9D9EB;
+    --blue-wash: #EAF3FA;
+    --ink: #1c2a3a;
+    --muted: #5a6b7d;
+    --line: #d5e3ef;
+    --bg: #fbfdff;
+    --card: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  a { color: #1b5e9e; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(11,37,69,.97); color: #fff;
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  nav .brand { font-weight: 700; letter-spacing: .04em; color: #fff; text-decoration: none; }
+  nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; }
+  nav ul a { white-space: nowrap; color: var(--blue-light); text-decoration: none; font-size: 15px; padding: 6px 0; border-bottom: 2px solid transparent; }
+  nav ul a:hover, nav ul a:focus-visible { color: #fff; border-color: var(--blue); }
+
+  /* Hero */
+  header.hero { background: linear-gradient(180deg, var(--blue-light), var(--blue-wash)); padding: 56px 0 48px; }
+  .hero .wrap { display: flex; gap: 40px; align-items: center; }
+  .hero img {
+    width: 200px; height: 200px; object-fit: cover; object-position: center 20%;
+    border-radius: 50%; border: 5px solid #fff; box-shadow: 0 6px 20px rgba(11,37,69,.18); flex: none;
+  }
+  .hero h1 { margin: 0 0 4px; font-size: 44px; line-height: 1.1; color: var(--navy); letter-spacing: -.01em; }
+  .hero .tag { margin: 0 0 18px; font-size: 19px; color: #26486f; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .pill {
+    display: inline-block; padding: 7px 16px; border-radius: 999px; font-size: 15px; text-decoration: none;
+    background: var(--navy); color: #fff; border: 1px solid var(--navy);
+  }
+  .pill:hover, .pill:focus-visible { background: #fff; color: var(--navy); }
+  .loc { color: #26486f; font-size: 15px; margin-right: 6px; }
+
+  /* Sections */
+  section { padding: 52px 0 8px; }
+  h2 {
+    margin: 0 0 22px; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: var(--navy);
+    display: flex; align-items: center; gap: 14px;
+  }
+  h2::after { content: ""; flex: 1; height: 2px; background: var(--blue); opacity: .6; }
+
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-left: 5px solid var(--blue);
+    border-radius: 10px; padding: 20px 24px; margin-bottom: 18px; box-shadow: 0 1px 3px rgba(11,37,69,.05);
+  }
+  .row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .org { margin: 0; font-size: 19px; color: var(--navy); }
+  .where, .when { color: var(--muted); font-size: 15px; }
+  .role { margin: 2px 0 0; font-weight: 600; }
+  .blurb { margin: 2px 0 8px; color: var(--muted); font-style: italic; font-size: 15px; }
+  ul.b { margin: 8px 0 0; padding-left: 20px; }
+  ul.b li { margin-bottom: 6px; }
+
+  /* Experience: company group with role tiles */
+  .company { margin-bottom: 30px; }
+  .company > .head { padding: 0 2px 10px; }
+  .company .tiles { display: grid; gap: 14px; }
+  .tile {
+    background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--blue);
+    border-radius: 10px; padding: 16px 22px 12px;
+  }
+  .tile.plain { background: var(--blue-wash); }
+  .tile h4 { margin: 0; font-size: 16.5px; color: var(--navy); }
+  .tile .when { white-space: nowrap; }
+
+  /* Additional info */
+  dl { margin: 0; display: grid; grid-template-columns: 110px 1fr; gap: 14px 20px; }
+  dt { font-weight: 700; color: var(--navy); }
+  dd { margin: 0; }
+
+  footer { margin-top: 56px; background: var(--navy); color: var(--blue-light); padding: 28px 0; font-size: 14px; text-align: center; }
+  footer a { color: #fff; }
+
+  @media (max-width: 680px) {
+    body { font-size: 16px; }
+    nav ul { gap: 14px; }
+    nav .brand { display: none; }
+    nav .wrap { justify-content: center; }
+    .hero .wrap { flex-direction: column; text-align: center; gap: 24px; }
+    .hero h1 { font-size: 34px; }
+    .links { justify-content: center; }
+    .hero img { width: 160px; height: 160px; }
+    dl { grid-template-columns: 1fr; gap: 2px; }
+    dd { margin-bottom: 12px; }
+    .tile .when { white-space: normal; }
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">Takuma Murakami</a>
+    <ul>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="#additional">More</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <img src="images/photo-web.jpg" alt="Portrait of Takuma Murakami">
+    <div>
+      <h1>Takuma Murakami</h1>
+      <p class="tag">MBA Candidate, Columbia Business School</p>
+      <div class="links">
+        <span class="loc">New York, NY</span>
+        <a class="pill" href="https://www.linkedin.com/in/takuma-murakami">LinkedIn</a>
+        <a class="pill" href="https://github.com/TMurakami27">GitHub</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <div class="row"><h3 class="org">Columbia Business School</h3><span class="where">New York, NY</span></div>
+      <div class="row"><span class="role">Master of Business Administration, May 2027</span><span class="when">Jan 2026 – Present</span></div>
+      <ul class="b"><li>Japanese Business Association, VP of Career</li></ul>
+    </div>
+    <div class="card">
+      <div class="row"><h3 class="org">Osaka University</h3><span class="where">Osaka, Japan</span></div>
+      <div class="row"><span class="role">Bachelor of Laws (LLB), March 2015</span><span class="when">Apr 2011 – Mar 2015</span></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="company">
+      <div class="head">
+        <div class="row"><h3 class="org">Sumitomo Mitsui Banking Corporation</h3><span class="where">Mexico City, Mexico</span></div>
+        <div class="row"><span class="blurb">SMBC is the 2<sup>nd</sup> largest bank in Japan with $1.7T USD total assets (2026)</span><span class="when">Apr 2023 – Dec 2025</span></div>
+      </div>
+      <div class="tiles">
+        <div class="tile">
+          <div class="row"><h4>Vice President, Japanese &amp; Asian Corporate Banking Dept. — Americas Division</h4><span class="when">Jul 2025 – Dec 2025</span></div>
+          <ul class="b">
+            <li>Led a $135M USD term loan project, the largest new loan in the Mexico office in 3 years by coordinating 8 departments from strategy to capital markets in US, Mexico, and Japan</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <div class="row"><h4>Associate, Japanese &amp; Asian Corporate Banking Dept. — Americas Division</h4><span class="when">Apr 2023 – Jun 2025</span></div>
+          <ul class="b">
+            <li>Managed a 60+ company portfolio with $15B USD revenue and generated $8.0M USD in profit, which exceeded the target by 50%+ through lending, FX, and cash management cross-sell and was the highest among Mexico office peers</li>
+            <li>Secured a newly established Mexican subsidiary of a Japanese financial institution as a new client, winning a $65MM deposit and 70% of its assets under management (selected as an outstanding example of a substantial new client)</li>
+            <li>Promoted “Nearshoring Project” to acquire transactions with Japanese companies newly entering Mexico by collaborating with 15+ corporate banking departments in Japan to convince headquarters in Japan to enter Mexico by meeting 44 new prospects and acquiring 10 new account openings (10x more than FY22)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="company">
+      <div class="head">
+        <div class="row"><h3 class="org">Sumitomo Corporation</h3><span class="where">Tokyo, Japan &amp; Mexico</span></div>
+        <div class="row"><span class="blurb">Sumitomo Corp is a conglomerate, one of the largest trading houses in Japan with $46B USD revenue (2026)</span><span class="when">Apr 2015 – Mar 2023</span></div>
+      </div>
+      <div class="tiles">
+        <div class="tile">
+          <div class="row"><h4>Senior Associate – Tokyo, Risk Management Dept. No. 5 (Investment advisory for Telecom, IoT sector)</h4><span class="when">Jan 2022 – Mar 2023</span></div>
+          <ul class="b">
+            <li>Executed due diligence of a new joint venture with Vodafone on a digital platform using SIM and blockchain and developed a financial model in London by leading 6 members, allowing Sumitomo to enter new business field by investing $30M USD</li>
+            <li>Persuaded Sumitomo management to stay in flagship Myanmar telecommunications JV after human rights due diligence following the 2021 coup, based on both corporate social responsibility to over 20M service users and financial impact to recover Sumitomo’s $600M USD investment</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <div class="row"><h4>Assistant Manager – Guanajuato, Mexico — secondment to Hirotec Mexico</h4><span class="when">Feb 2020 – Dec 2021</span></div>
+          <p class="blurb">Hirotec Mexico is car parts manufacturer and JV Subsidiary of Sumitomo with $500M+ USD revenue</p>
+          <ul class="b">
+            <li>Decreased interest payments by 50% by refining cash flow projections, designing new borrowing renewal framework, and negotiating with banks, leading a team of 6 Mexican colleagues and enabling them to contribute through value-adding tasks</li>
+            <li>Achieved $60M USD expansion of loan facilities from 4 banks after $20M USD credit line reduction by a bank (due to manufacturing plant shutdowns related to Covid-19), saving the company from bankruptcy and avoiding layoffs</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <div class="row"><h4>Assistant Manager – Guanajuato, Mexico — secondment to Sumitomo Corporation de Mexico</h4><span class="when">Jun 2019 – Jan 2020</span></div>
+          <p class="blurb">Sumitomo Corporation de Mexico is a Mexican subsidiary of Sumitomo with $100M+ USD revenue</p>
+          <ul class="b">
+            <li>Led seminars on topics including finance &amp; accounting, and internal controls for Japanese executives and Mexican employees of 6 subsidiaries with $4B USD+ revenue to raise management standards and resolve problems among group companies</li>
+          </ul>
+        </div>
+        <div class="tile plain">
+          <div class="row"><h4>Spanish Language Trainee – Puebla, Mexico, Universidad de las Américas Puebla (company-sponsored)</h4><span class="when">Jul 2018 – May 2019</span></div>
+        </div>
+        <div class="tile">
+          <div class="row"><h4>Associate – Tokyo, Risk Management Dept. No. 3 (Investment advisory for Leasing, Aerospace sector)</h4><span class="when">Apr 2015 – Jun 2018</span></div>
+          <ul class="b">
+            <li>Scrutinized contracts and valuations for restructuring of investments of 3 leasing JVs with Sumitomo Mitsui Financial Group as the youngest member of a 5-person team, resulting in increase of annual profit of ~$50M USD for Sumitomo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="additional">
+    <h2>Additional Information</h2>
+    <div class="card">
+      <dl>
+        <dt>Languages</dt>
+        <dd>Japanese (native); English (fluent); Spanish (professional working proficiency, DELE B2)</dd>
+        <dt>Awards</dt>
+        <dd>Grand Prize, Guanajuato Hiroshima Amigo Association — led a 4-person team hosting 30+ public school students on a Japanese corporate visit with the Guanajuato State Ministry of Education</dd>
+        <dt>Interests</dt>
+        <dd>Golf; baseball (MLB); scuba diving (PADI Rescue Diver, 100+ dives across Japan, Guam, and Mexico); calisthenics; running</dd>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Takuma Murakami · <a href="https://www.linkedin.com/in/takuma-murakami">LinkedIn</a> · <a href="https://github.com/TMurakami27">GitHub</a></div>
+</footer>
+
+</body>
+</html>
